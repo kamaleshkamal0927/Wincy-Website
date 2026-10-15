@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#0B0B0F" />
+  <linearGradient id="favChess" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#9333EA" />
+    <stop offset="50%" stop-color="#C026D3" />
+    <stop offset="100%" stop-color="#EC4899" />
+  </linearGradient>
+  <g transform="translate(4, 3)">
+    <path d="M12 46 H44 C45.5 46 46 47.5 45 49 C43.5 51 41 52 28 52 C15 52 12.5 51 11 49 C10 47.5 10.5 46 12 46 Z" fill="url(#favChess)" />
+    <rect x="15" y="42" width="26" height="3" rx="1.5" fill="#E879F9" opacity="0.9" />
+    <path d="M17 41 C19 34 21 30 16 24 C13 20 13 16 16 14 C18 12 21 14 23 16 C25 13 27 11 28 10 C29 11 31 13 33 16 C35 14 38 12 40 14 C43 16 43 20 40 24 C35 30 37 34 39 41 Z" fill="url(#favChess)" />
+    <rect x="26.5" y="4" width="3" height="7" rx="1" fill="#F472B6" />
+    <rect x="24" y="6" width="8" height="2.5" rx="0.8" fill="#F472B6" />
+    <circle cx="28" cy="20" r="2.5" fill="#FFFFFF" />
+  </g>
+</svg>
