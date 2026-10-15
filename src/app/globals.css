@@ -1,8 +1,8 @@
-@import '@fontsource/outfit/400.css';
-@import '@fontsource/outfit/500.css';
-@import '@fontsource/outfit/600.css';
-@import '@fontsource/outfit/700.css';
-@import '@fontsource/outfit/800.css';
+@import '@fontsource/sora/400.css';
+@import '@fontsource/sora/500.css';
+@import '@fontsource/sora/600.css';
+@import '@fontsource/sora/700.css';
+@import '@fontsource/sora/800.css';
 @import '@fontsource-variable/plus-jakarta-sans';
 @import '@fontsource/fira-code/400.css';
 @import '@fontsource/fira-code/500.css';
@@ -13,7 +13,7 @@
 @tailwind utilities;
 
 :root {
-  --font-heading: 'Outfit', 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-body: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'Fira Code', 'Courier New', monospace;
 
@@ -22,28 +22,36 @@
   --font-inter: var(--font-body);
   --font-jetbrains-mono: var(--font-mono);
 
-  /* Colors */
-  --ink-black: #0B0B0F;
-  --ink-panel: #111216;
-  --ink-card: #17181D;
-  --mint-light: #BBFFAB;
-  --mint-soft: #A9E8A0;
-  --lime-accent: #4DFF3A;
-  --lime-text-on-dark: #8CFF6B;
-  --page-offwhite: #FBFEF9;
-  --surface-grey-green: #EFF2EA;
-  --text-primary: #0B0B0F;
-  --text-muted: #555A55;
-  --text-on-dark: #FFFFFF;
-  --text-muted-on-dark: #B4B8B0;
-  --border-light: #D9DDD3;
-  --border-dark: #2A2C33;
+  /* Colors — Wincy Brand Palette */
+  --ink-black:          #130C12;
+  --ink-panel:          #1E1020;
+  --ink-card:           #271529;
+
+  /* Brand accent — hot pink */
+  --mint-light:         #F9C5E0;  /* soft blush */
+  --mint-soft:          #F5E0EE;  /* lightest rose */
+  --lime-accent:        #E00070;  /* hot pink — PRIMARY */
+  --lime-text-on-dark:  #F07DB8;  /* pink readable on dark */
+
+  /* Page surfaces */
+  --page-offwhite:      #FDF9FB;
+  --surface-grey-green: #F5EDF4;  /* rose-tinted */
+
+  /* Text */
+  --text-primary:       #1A0F18;
+  --text-muted:         #6B5F6A;
+  --text-on-dark:       #FFFFFF;
+  --text-muted-on-dark: #C4A8BE;
+
+  /* Borders */
+  --border-light: #E8D4E2;
+  --border-dark:  #3D2040;
 
   /* Grades */
   --grade-good: #16A765;
-  --grade-ok: #A4D500;
+  --grade-ok:   #A4D500;
   --grade-warn: #F5C400;
-  --grade-bad: #E5484D;
+  --grade-bad:  #E5484D;
 }
 
 @layer base {
@@ -59,6 +67,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: -0.011em;
+    text-rendering: optimizeLegibility;
   }
 
   body {
@@ -81,7 +90,7 @@
 
   ::selection {
     background-color: var(--mint-light);
-    color: var(--ink-black);
+    color: var(--text-primary);
   }
 }
 
@@ -100,27 +109,27 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0B0F;
+  background: #FDF9FB;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2A2C33;
-  border-radius: 4px;
+  background: #D9B0CC;
+  border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4DFF3A;
+  background: #B07898;
 }
 
 /* Utilities */
 .glass-dark {
-  background: rgba(17, 18, 22, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(29, 29, 31, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 .glass-dropdown {
-  background: rgba(23, 24, 29, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
 .text-balance {

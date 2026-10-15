@@ -11,25 +11,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink_black: '#0B0B0F',
-        ink_panel: '#111216',
-        ink_card: '#17181D',
-        mint_light: '#BBFFAB',
-        mint_soft: '#A9E8A0',
-        lime_accent: '#4DFF3A',
-        lime_text_on_dark: '#8CFF6B',
-        page_offwhite: '#FBFEF9',
-        surface_grey_green: '#EFF2EA',
-        text_primary: '#0B0B0F',
-        text_muted: '#555A55',
-        text_on_dark: '#FFFFFF',
-        text_muted_on_dark: '#B4B8B0',
-        border_light: '#D9DDD3',
-        border_dark: '#2A2C33',
+        // Dark surfaces (unchanged — universal)
+        ink_black:  '#130C12',   // deep wine-black
+        ink_panel:  '#1E1020',   // dark maroon panel
+        ink_card:   '#271529',   // card on dark bg
+
+        // Brand accent — hot pink (replaces lime)
+        mint_light:          '#F9C5E0',  // soft blush pink (replaces mint_light)
+        mint_soft:           '#F5E0EE',  // lightest rose surface (replaces mint_soft)
+        lime_accent:         '#E00070',  // hot pink — PRIMARY accent
+        lime_text_on_dark:   '#F07DB8',  // softer pink readable on dark
+
+        // Page surfaces — warm whites
+        page_offwhite:       '#FDF9FB',  // warm near-white
+        surface_grey_green:  '#F5EDF4',  // rose-tinted surface panel
+
+        // Text
+        text_primary:       '#1A0F18',
+        text_muted:         '#6B5F6A',
+        text_on_dark:       '#FFFFFF',
+        text_muted_on_dark: '#C4A8BE',
+
+        // Borders
+        border_light: '#E8D4E2',
+        border_dark:  '#3D2040',
+
+        // Semantic grades (kept for mock UI accuracy)
         grade_good: '#16A765',
-        grade_ok: '#A4D500',
+        grade_ok:   '#A4D500',
         grade_warn: '#F5C400',
-        grade_bad: '#E5484D',
+        grade_bad:  '#E5484D',
       },
       fontFamily: {
         heading: ['var(--font-heading)', 'sans-serif'],
@@ -38,16 +49,16 @@ const config: Config = {
         mono: ['var(--font-mono)', 'monospace'],
       },
       borderRadius: {
-        panel: '28px',
-        card: '22px',
+        panel: '30px',
+        card: '24px',
         input: '11px',
-        button: '11px',
+        button: '9999px',
         pill: '9999px',
       },
       boxShadow: {
-        device: '0 40px 80px -20px rgba(0,0,0,0.45)',
-        card: '0 10px 30px rgba(11,11,15,0.08)',
-        limeGlow: '0 0 0 4px rgba(77,255,58,0.25)',
+        device: '0 32px 72px -24px rgba(0,0,0,0.42)',
+        card: '0 12px 32px rgba(29,29,31,0.06)',
+        limeGlow: '0 0 0 4px rgba(224,0,112,0.25)',
       },
       maxWidth: {
         container: '1280px',

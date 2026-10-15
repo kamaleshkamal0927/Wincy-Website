@@ -50,25 +50,29 @@ export function Navbar() {
       className={cn(
         'sticky top-0 left-0 right-0 z-40 transition-all duration-300 select-none',
         scrolled
-          ? 'bg-ink_black/90 backdrop-blur-md border-b border-border_dark/80 py-3 shadow-md'
-          : 'bg-ink_black border-b border-border_dark/40 py-4'
+          ? 'bg-white/85 backdrop-blur-xl border-b border-border_light/80 py-3 shadow-sm'
+          : 'bg-page_offwhite/90 backdrop-blur-xl border-b border-border_light/70 py-4'
       )}
     >
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent rounded-lg"
+          className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent rounded-lg"
           aria-label="Wincy Software Solutions Home"
         >
-          <div className="relative h-10 w-44 sm:w-52">
+          <div className="relative h-9 w-9 shrink-0">
             <Image
-              src="/images/logo-dark.svg"
-              alt="Wincy Software Solutions"
+              src="/images/wincy-emblem-transparent.png"
+              alt="Wincy Software Solutions logo"
               fill
               priority
-              className="object-contain object-left"
+              className="object-contain"
             />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="font-heading font-bold text-sm tracking-tight text-ink_black">WINCY</span>
+            <span className="font-body text-[9px] font-medium tracking-widest text-text_muted uppercase">Software Solutions</span>
           </div>
         </Link>
 
@@ -92,8 +96,8 @@ export function Navbar() {
                     className={cn(
                       'flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-colors duration-200 cursor-pointer',
                       isOpen
-                        ? 'text-lime_accent bg-white/5'
-                        : 'text-text_muted_on_dark hover:text-white'
+                        ? 'text-ink_black bg-black/5'
+                        : 'text-text_muted hover:text-ink_black'
                     )}
                     aria-expanded={isOpen}
                   >
@@ -114,25 +118,25 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.98 }}
                         transition={{ duration: 0.2, ease: appleEase }}
-                        className="absolute top-full left-0 mt-2 w-80 p-3 rounded-card bg-ink_card border border-border_dark shadow-device z-50 glass-dropdown"
+                        className="absolute top-full left-0 mt-2 w-80 p-3 rounded-card border border-border_light shadow-card z-50 glass-dropdown"
                       >
                         {link.children?.map((group) => (
                           <div key={group.category} className="space-y-1">
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-text_muted_on_dark px-3 py-1 block">
+                            <span                             className="text-[10px] font-mono uppercase tracking-wider text-text_muted px-3 py-1 block">
                               {group.category}
                             </span>
                             {group.items.map((item) => (
                               <Link
                                 key={item.label}
                                 href={item.href}
-                                className="block p-2.5 rounded-lg hover:bg-white/5 transition-colors group/item"
+                                className="block p-2.5 rounded-lg hover:bg-black/5 transition-colors group/item"
                               >
-                                <div className="text-sm font-medium text-white group-hover/item:text-lime_accent transition-colors flex items-center justify-between">
+                                <div className="text-sm font-medium text-ink_black group-hover/item:text-lime_accent transition-colors flex items-center justify-between">
                                   <span>{item.label}</span>
                                   <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-lime_accent" />
                                 </div>
                                 {item.description && (
-                                  <p className="text-xs text-text_muted_on_dark mt-0.5 line-clamp-1">
+                                  <p className="text-xs text-text_muted mt-0.5 line-clamp-1">
                                     {item.description}
                                   </p>
                                 )}
@@ -156,8 +160,8 @@ export function Navbar() {
                 className={cn(
                   'px-3 py-2 rounded-full text-sm font-medium transition-colors duration-200',
                   isActive
-                    ? 'text-lime_accent bg-white/5'
-                    : 'text-text_muted_on_dark hover:text-white'
+                    ? 'text-ink_black bg-black/5'
+                    : 'text-text_muted hover:text-ink_black'
                 )}
               >
                 {link.label}
@@ -170,7 +174,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             href="/book-a-demo"
-            className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide bg-white text-ink_black hover:bg-lime_accent hover:text-ink_black shadow-sm transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent"
+            className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide bg-ink_black text-white hover:bg-lime_accent hover:text-ink_black shadow-sm transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent"
           >
             Get Started
           </Link>
@@ -179,7 +183,7 @@ export function Navbar() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 rounded-lg text-text_muted_on_dark hover:text-white bg-white/5 hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
+          className="lg:hidden p-2 rounded-lg text-ink_black hover:bg-black/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
         >
@@ -195,7 +199,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: appleEase }}
-            className="lg:hidden border-t border-border_dark bg-ink_black/98 px-4 py-6 overflow-y-auto max-h-[85vh] shadow-device"
+            className="lg:hidden border-t border-border_light bg-page_offwhite/98 px-4 py-6 overflow-y-auto max-h-[85vh] shadow-card"
           >
             <div className="space-y-4">
               {NAVIGATION_DATA.map((link) => {
@@ -206,12 +210,12 @@ export function Navbar() {
 
                 if (hasDropdown) {
                   return (
-                    <div key={link.label} className="border-b border-border_dark/50 pb-3">
+                    <div key={link.label} className="border-b border-border_light pb-3">
                       <button
                         onClick={() =>
                           setMobileAccordion(isAccordionOpen ? null : link.label)
                         }
-                        className="flex items-center justify-between w-full text-left text-base font-medium text-white py-2"
+                        className="flex items-center justify-between w-full text-left text-base font-medium text-ink_black py-2"
                       >
                         <span>{link.label}</span>
                         <ChevronDown
@@ -231,7 +235,7 @@ export function Navbar() {
                                   key={item.label}
                                   href={item.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className="block py-2 text-sm text-text_muted_on_dark hover:text-lime_accent transition-colors"
+                                  className="block py-2 text-sm text-text_muted hover:text-ink_black transition-colors"
                                 >
                                   {item.label}
                                 </Link>
@@ -249,7 +253,7 @@ export function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block py-2 text-base font-medium text-white hover:text-lime_accent transition-colors border-b border-border_dark/50"
+                    className="block py-2 text-base font-medium text-ink_black hover:text-lime_accent transition-colors border-b border-border_light"
                   >
                     {link.label}
                   </Link>
@@ -267,7 +271,7 @@ export function Navbar() {
                 <div className="text-center pt-2">
                   <a
                     href={SITE_CONFIG.contact.phoneHref}
-                    className="text-xs font-mono text-text_muted_on_dark hover:text-white"
+                    className="text-xs font-mono text-text_muted hover:text-ink_black"
                   >
                     {SITE_CONFIG.contact.phone}
                   </a>

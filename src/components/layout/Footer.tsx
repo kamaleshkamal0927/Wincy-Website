@@ -24,14 +24,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-border_dark/60">
           {/* Col 1: Brand Info & Tagline */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block" aria-label="Wincy Home">
-              <div className="relative h-11 w-52">
+            <Link href="/" className="inline-flex items-center gap-2.5" aria-label="Wincy Home">
+              <div className="relative h-10 w-10 shrink-0">
                 <Image
-                  src="/images/logo-dark.svg"
-                  alt="Wincy Software Solutions"
+                  src="/images/wincy-emblem-transparent.png"
+                  alt="Wincy Software Solutions logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain"
                 />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-heading font-bold text-sm tracking-tight text-white">WINCY</span>
+                <span className="font-body text-[9px] font-medium tracking-widest text-lime_text_on_dark uppercase">Software Solutions</span>
               </div>
             </Link>
 

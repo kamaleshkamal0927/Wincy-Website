@@ -19,7 +19,7 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
-          backgroundColor: '#0B0B0F',
+          backgroundColor: '#130C12',
           padding: '80px',
           fontFamily: 'sans-serif',
         }}
@@ -29,8 +29,8 @@ export default async function Image() {
             style={{
               padding: '8px 20px',
               borderRadius: '9999px',
-              backgroundColor: '#4DFF3A',
-              color: '#0B0B0F',
+              backgroundColor: '#E00070',
+              color: '#FFFFFF',
               fontSize: '18px',
               fontWeight: 'bold',
               letterSpacing: '1px',
@@ -56,12 +56,13 @@ export default async function Image() {
           <div
             style={{
               fontSize: '26px',
-              color: '#B4B8B0',
+              color: '#C4A8BE',
               lineHeight: 1.4,
               maxWidth: '900px',
             }}
           >
-            Accelerating enterprise digital transformation with deterministic AI code transformation, cloud migration, and automated documentation.
+            Accelerating enterprise digital transformation with deterministic AI code
+            transformation, cloud migration, and automated documentation.
           </div>
         </div>
 
@@ -71,14 +72,14 @@ export default async function Image() {
             alignItems: 'center',
             justifyContent: 'space-between',
             width: '100%',
-            borderTop: '2px solid #2A2C33',
+            borderTop: '2px solid #3D2040',
             paddingTop: '30px',
           }}
         >
           <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF' }}>
             WINCY SOFTWARE SOLUTIONS
           </div>
-          <div style={{ fontSize: '20px', color: '#8CFF6B', fontFamily: 'monospace' }}>
+          <div style={{ fontSize: '20px', color: '#F07DB8', fontFamily: 'monospace' }}>
             Chennai, India • wincysoftwaresolutions.com
           </div>
         </div>
