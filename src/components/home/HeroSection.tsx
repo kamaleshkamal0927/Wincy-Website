@@ -10,11 +10,12 @@ import { Sparkles, Zap } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative pt-8 sm:pt-12 pb-16 lg:pb-24 overflow-hidden bg-page_offwhite">
-      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+    <section className="relative isolate pt-8 sm:pt-12 pb-16 lg:pb-24 overflow-hidden bg-page_offwhite">
+      <div aria-hidden="true" className="hero-glow absolute inset-0 -z-10" />
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: appleEase }}
             className="lg:col-span-6 py-2 sm:py-8 lg:py-10 flex flex-col justify-between relative"
@@ -32,11 +33,11 @@ export function HeroSection() {
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-medium text-ink_black/85 font-heading tracking-tight">
+              <p className="text-lg sm:text-xl font-medium text-ink_black/85 font-heading tracking-tight max-w-xl">
                 {HERO_CONTENT.subheading}
               </p>
 
-              <p className="text-base sm:text-lg text-text_muted leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-text_muted leading-relaxed max-w-lg">
                 {HERO_CONTENT.body}
               </p>
             </div>
@@ -70,12 +71,14 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: appleEase }}
             className="lg:col-span-6 flex flex-col justify-center lg:translate-y-2"
           >
-            <HeroAssessmentMockup />
+            <div className="hero-dashboard-float">
+              <HeroAssessmentMockup />
+            </div>
           </motion.div>
         </div>
       </div>

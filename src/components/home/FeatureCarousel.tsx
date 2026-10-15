@@ -36,18 +36,18 @@ export function FeatureCarousel() {
   }, []);
 
   return (
-    <section className="py-20 lg:py-28 bg-ink_black text-white select-none relative overflow-hidden" id="tech-stack">
+    <section className="py-20 lg:py-28 bg-surface_grey_green text-ink_black select-none relative overflow-hidden" id="tech-stack">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-lime_accent text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-border_light text-lime_accent text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>MODERNIZATION ENGINE CAPABILITIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium tracking-tight text-ink_black">
             Engineered for Modern Enterprise Architectures
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-text_muted_on_dark">
+          <p className="mt-4 text-sm sm:text-base text-text_muted">
             Explore how each stage of our AI-driven modernization pipeline operates with deterministic precision.
           </p>
         </Reveal>
@@ -63,7 +63,7 @@ export function FeatureCarousel() {
                 className={`relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent ${
                   isActive
                     ? 'bg-mint_light text-ink_black shadow-limeGlow'
-                    : 'bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/5'
+                    : 'bg-white text-text_muted border border-border_light hover:border-lime_accent/50 hover:text-ink_black'
                 }`}
               >
                 {tab.label}
@@ -73,7 +73,7 @@ export function FeatureCarousel() {
         </div>
 
         {/* Big White Rounded Card with Content + Dark UI Screenshot on right */}
-        <div className="rounded-panel bg-white text-ink_black p-6 sm:p-10 lg:p-12 shadow-device border border-border_light">
+        <div className="rounded-panel bg-white text-ink_black p-6 sm:p-10 lg:p-12 shadow-card border border-border_light">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab.id}
@@ -125,19 +125,19 @@ export function FeatureCarousel() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="p-3 rounded-full bg-mint_light text-ink_black hover:bg-lime_accent transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
+              className="p-3 rounded-full bg-white border border-border_light text-ink_black hover:bg-lime_accent hover:text-white transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
               aria-label="Previous tab"
             >
               <ArrowLeft className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="p-3 rounded-full bg-mint_light text-ink_black hover:bg-lime_accent transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
+              className="p-3 rounded-full bg-white border border-border_light text-ink_black hover:bg-lime_accent hover:text-white transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime_accent cursor-pointer"
               aria-label="Next tab"
             >
               <ArrowRight className="w-5 h-5" />
             </button>
-            <span className="text-xs font-mono text-text_muted_on_dark ml-2">
+            <span className="text-xs font-mono text-text_muted ml-2">
               0{activeTabIdx + 1} / 0{FEATURE_CAROUSEL_TABS.length}
             </span>
           </div>

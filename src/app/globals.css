@@ -77,6 +77,11 @@
     font-family: var(--font-body);
   }
 
+  .home-page > section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 880px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     letter-spacing: -0.025em;
@@ -134,4 +139,24 @@
 
 .text-balance {
   text-wrap: balance;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse at 78% 24%, rgba(224, 0, 112, 0.1), transparent 34%),
+    radial-gradient(ellipse at 8% 90%, rgba(249, 197, 224, 0.3), transparent 38%);
+}
+
+@keyframes dashboard-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.hero-dashboard-float {
+  animation: dashboard-float 6s ease-in-out infinite;
 }

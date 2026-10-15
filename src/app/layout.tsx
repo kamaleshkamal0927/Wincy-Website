@@ -6,7 +6,6 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { BackToTop } from '@/components/ui/BackToTop';
-import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
 import { ToastProvider } from '@/components/ui/Toast';
 
 export const viewport: Viewport = {
@@ -96,25 +95,23 @@ export default function RootLayout({
         </a>
 
         <ToastProvider>
-          <SmoothScrollProvider>
-            {/* Top 3px Lime Scroll Progress Bar */}
-            <ScrollProgress />
+          {/* Top 3px Lime Scroll Progress Bar */}
+          <ScrollProgress />
 
-            {/* Top Black Announcement Bar */}
-            <AnnouncementBar />
+          {/* Top Black Announcement Bar */}
+          <AnnouncementBar />
 
-            {/* Sticky Translucent Navbar */}
-            <Navbar />
+          {/* Sticky Translucent Navbar */}
+          <Navbar />
 
-            {/* Page Content */}
-            <div className="flex-1">{children}</div>
+          {/* Page Content */}
+          <div className="flex-1">{children}</div>
 
-            {/* Black Enterprise Footer */}
-            <Footer />
+          {/* Black Enterprise Footer */}
+          <Footer />
 
-            {/* Floating Back to Top Button */}
-            <BackToTop />
-          </SmoothScrollProvider>
+          {/* Floating Back to Top Button */}
+          <BackToTop />
         </ToastProvider>
       </body>
     </html>
